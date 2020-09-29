@@ -1,0 +1,63 @@
+
+@import   "./components/functions";
+@import "./components/colors-palette";
+@import "./components/mixins";
+
+.watch-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.watch-background
+{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+color: blue;
+background: url(../images/watchbackground.png);
+background-size: contain;
+width: 300px;
+height: 300px;
+z-index: -10;
+padding: 2em;
+}
+
+
+
+.tile-sec,.tile-min,.tile-hours
+{
+    @include handWatch;
+
+    background: linear-gradient($secondsColor 50%, transparent 50%);
+    width: 5px;
+    height: 250px;
+    border-radius: 15px;
+}
+
+
+.tile-min
+{
+ 
+    background: linear-gradient( $minsColor 50%,transparent 50%);
+    width: 7px;
+    height: 250px;
+    border-radius: 25px;
+
+    &:hover
+    {
+        width: 10px;
+    }
+
+}
+
+.tile-hours{
+
+    background: linear-gradient( $minsColor 50%,transparent 50%);
+    width: 10px;
+    height: 150px;
+    border-radius: 15px;
+
+}

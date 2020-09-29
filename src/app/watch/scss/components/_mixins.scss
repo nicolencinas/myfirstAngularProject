@@ -1,0 +1,8 @@
+@mixin handWatch
+{
+    z-index: 2;
+  position: absolute;
+  width: auto;
+  transition: 0.5s ease-in-out;
+  transition-timing-function: linear;
+}

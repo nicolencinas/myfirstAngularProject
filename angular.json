@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@poppersjs/core/dist/umd/popper.min.js"
+              ,"node_modules/bootstrap/dist/js/bootstrap.min.js"
+              ]
           },
           "configurations": {
             "production": {
@@ -119,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "firstApp"
+    }
+  },
+  "defaultProject": "firstApp",
+  "cli": {
+    "analytics": "235df0e4-e966-4294-9245-7d258e3d9b82"
+  }
 }
