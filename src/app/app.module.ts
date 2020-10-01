@@ -7,20 +7,28 @@ import { WatchComponent } from './watch/watch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { MydialogComponent } from './mydialog/mydialog.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WatchComponent
+    WatchComponent,
+    ConfirmDialogComponent,
+    MydialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
+  entryComponents:[ConfirmDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

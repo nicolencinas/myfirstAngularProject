@@ -1,10 +1,15 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-watch',
   templateUrl: './watch.component.html',
   styleUrls: ['./css/watch.component.css']
+  
 })
+
+
 
 
 export class WatchComponent implements OnInit 
@@ -13,10 +18,17 @@ export class WatchComponent implements OnInit
   @ViewChild ("secs") secs: ElementRef;
   @ViewChild ("mins") mins: ElementRef;
 
-  constructor() { }
+  constructor() 
+  {
+   
+   }
+
+
 
   ngOnInit(): void 
   {
+    
+
     setInterval (()=>{
       const date=new Date();
       this.updateClock(date);
@@ -44,5 +56,14 @@ export class WatchComponent implements OnInit
     this.mins.nativeElement.style.transform="rotate("+degMinutes+"deg)";
     this.hours.nativeElement.style.transform="rotate("+degHours+"deg)";
   }
+
+  
+
+  
+  
+
+  
+
+  
 
 }

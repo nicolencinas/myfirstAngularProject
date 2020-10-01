@@ -1,0 +1,12 @@
+
+<div mat-dialog-content>
+    <p>
+        {{data}}
+    </p>
+
+</div>
+
+<div mat-dialog-actions>
+    <button mat-button (click)="onclickNO()">NO</button>
+    <button mat-button [mat-dialog-close]="true">SI</button>
+</div>
