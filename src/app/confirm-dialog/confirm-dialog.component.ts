@@ -17,7 +17,8 @@ export class ConfirmDialogComponent implements OnInit {
   {
    const dialogRef=this.dialog.open(MydialogComponent,
     {data: input,
-    width: '350px;'}
+    width: '350px;',
+    height:'350px'}
     )
 
    dialogRef.afterClosed().subscribe(res =>{console.log("holis")})

@@ -1,4 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, Inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { DigitalWatchComponent } from '../digital-watch/digital-watch.component';
+import { MydialogComponent } from '../mydialog/mydialog.component';
 
 
 
@@ -18,7 +21,7 @@ export class WatchComponent implements OnInit
   @ViewChild ("secs") secs: ElementRef;
   @ViewChild ("mins") mins: ElementRef;
 
-  constructor() 
+  constructor(public dialog: MatDialog) 
   {
    
    }
@@ -48,15 +51,35 @@ export class WatchComponent implements OnInit
     	var degHours = hours / 24 * 360;
     }
 
+
     degHours += minutes / 60 * 30;
     var degMinutes = minutes / 60 * 360;
     var degSecs = secs / 60 * 360;
+
+   
+   
 
     this.secs.nativeElement.style.transform="rotate("+degSecs+"deg)";
     this.mins.nativeElement.style.transform="rotate("+degMinutes+"deg)";
     this.hours.nativeElement.style.transform="rotate("+degHours+"deg)";
   }
 
+  public showDate()
+  {
+  
+    
+    const dialogRef=this.dialog.open(DigitalWatchComponent,
+      {
+      width: '350px;'}
+      )
+  
+     dialogRef.afterClosed().subscribe(res =>{console.log("holis")})
+
+   
+  }
+  
+
+  
   
 
   

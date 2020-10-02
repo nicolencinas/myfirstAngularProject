@@ -1,0 +1,10 @@
+@font-face
+ {
+font-family: digital;
+src: url(digital-7.ttf);
+}
+
+.digital-watch{
+    font-family: digital;
+    font-size: 3em;
+}

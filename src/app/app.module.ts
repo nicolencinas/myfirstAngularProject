@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { MydialogComponent } from './mydialog/mydialog.component';
+import { DigitalWatchComponent } from './digital-watch/digital-watch.component';
 
 
 
@@ -19,7 +20,8 @@ import { MydialogComponent } from './mydialog/mydialog.component';
     AppComponent,
     WatchComponent,
     ConfirmDialogComponent,
-    MydialogComponent
+    MydialogComponent,
+    DigitalWatchComponent
   ],
   imports: [
     BrowserModule,
